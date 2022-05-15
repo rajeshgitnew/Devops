@@ -18,5 +18,7 @@ sh "mvn -DskipTests clean  install"
       agent any
       steps {
         sh 'docker build -t javasamplecode:latest .'
+        }
+        }
     }
  }   
