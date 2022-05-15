@@ -11,7 +11,7 @@ echo "My Name is ${MyName}"
 stage ("compile") {
 steps {
 git url: 'https://github.com/rajeshgitnew/java.git', branch: 'master'
-sh "mvn clean install"
+sh "sudo mvn clean install"
    }
   }
  }
