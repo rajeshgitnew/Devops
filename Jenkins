@@ -11,9 +11,7 @@ echo "My Name is ${MyName}"
 stage ("build") {
 steps {
 git url: 'https://github.com/rajeshgitnew/java.git', branch: 'master'
-with maven {
 sh "mvn compile"
-    }
    }
   }
  }
