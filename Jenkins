@@ -10,9 +10,14 @@ echo "My Name is ${MyName}"
    }
 stage ("compile") {
 steps {
-git url: 'https://github.com/rajeshgitnew/java.git', branch: 'master'
+//git url: 'https://github.com/rajeshgitnew/java.git', branch: 'master'
 sh "mvn -DskipTests clean  install"
    }
   }
- }
-}
+  post {
+        success {
+                sh "mvn -DskipTests clean  install"
+                }    
+         }
+    }
+ }   
