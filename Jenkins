@@ -13,11 +13,10 @@ steps {
 //git url: 'https://github.com/rajeshgitnew/java.git', branch: 'master'
 sh "mvn -DskipTests clean  install"
    }
-  post {
-        success {
-                sh "mvn deploy"
-                }    
-         }
-         }
+ }
+  stage('Docker Build') {
+      agent any
+      steps {
+        sh 'docker build -t javasamplecode:latest .'
     }
  }   
