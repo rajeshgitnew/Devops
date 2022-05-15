@@ -8,10 +8,10 @@ steps {
 echo "My Name is ${MyName}"
     }
    }
-stage ("build") {
+stage ("compile") {
 steps {
 git url: 'https://github.com/rajeshgitnew/java.git', branch: 'master'
-sh "mvn compile"
+sh "mvn clean install test"
    }
   }
  }
