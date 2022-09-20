@@ -1,11 +1,11 @@
-def MyName = "Rajesh"
+def MyLab = "Devops"
 
 pipeline {
 agent any 
 stages {
 stage ("print variable") {
 steps { 
-echo "My Name is ${MyName}"
+echo "My Name is ${MyLab}"
     }
    }
 stage ("compile") {
